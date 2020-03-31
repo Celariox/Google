@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*J'ai commencé à m'emmêler à partir de la barre de recherche et des propriétés css concernant .barre .ico etc. */
+/*Je pense avoir râté les dimensions et faire en sorte que cela colle bien sur la page. J'ai donc bidouillé pour avoir un rendu "sympa" mais si on modifie les dimensions je pense qu'on peut vite se rendre compte
+que c'est n'importe quoi x).*/
+/*Et concernant le footer j'ai pas réussi à mettre une partie des liens vers la gauche, les autres vers la droite.*/
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Barre du haut */
+header {
+  width: 100%;
+  max-height: 500px;
+  float: right;
+  font-family: sans-serif;
+}
+
+/* Bouton Connexion en bleu */
+.login {
+  float: right;
+  margin-right: 15px;
+  margin-top: 15px;
+  background: #1a73e8;
+  border-radius: 3px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+/* Icône applications Google*/
+.icon {
+  float: right;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+/* Liens Gmail & Images*/
+.links {
+  float: right;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+.links a:hover{
+  color: black;
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+  font-size: 14px;
+  color: gray;
+}
+
+.login a{
+  color: white;
+}
+
+.logo img{
+  height: 100px;
+  width: 250px; 
+  margin: 100px auto 10px;
+  display: flex;
+}
+
+.logo img:hover{
+  cursor: pointer;
+}
+
+/* Bloc principal*/
+#main {
+  font-family: sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/*Barre de recherche*/
+.barre {
+  margin: 10px auto 10px;
+  /*max-width: 500px;*/
+  position: relative;
+  display: flex;
+}
+
+.search {
+  border-radius: 100px;
+  width: 400px;
+  height: 30px;
+  background: transparent;
+  border: 1px solid #dfdfdf;
+  padding: 0 40px;
+  font-size: 18px;
+  box-shadow: 0 0 0 0;
+  transition: box-shadow .2s;
+}
+
+.search:focus{
+  box-shadow: 0 0 10px -2px #1a73e8;
+}
+
+.barre .ico {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  display: flex;
+  font-size: 20px;
+  color: #dfdfdf;
+}
+
+.mic {
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  top: 0px;
+  font-size: 20px;
+  color: #dfdfdf;
+  position: absolute;
+  right: 0;
+}
+
+.fa.fa-search{
+  position: absolute;
+  top: 7px;
+}
+
+.fa.fa-microphone {
+  position: absolute;
+  top: 7px;
+}
+
+.boutons {
+  display: flex;
+}
+
+.boutons a{
+  text-decoration: none;
+  margin-right: 10px;
+  background-color: #dfdfdf;
+  color: gray;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.boutons a:hover {
+  border: 1px solid #000000;
+  background-color: #f0f0f0;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #dfdfdf;
+  border-top: 1px solid #cfcfcf;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
